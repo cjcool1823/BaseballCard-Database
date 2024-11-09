@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Card Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkLoginStatus()">
+    <!-- Navigation bar -->
+    <nav>
+        <a href="#addCard">Add Card</a>
+        <a href="#viewCards">View Cards</a>
+
+        <!-- Profile Icon with Dropdown -->
+     <!-- Profile Icon with Dropdown -->
+<div class="profile">
+    <img src="profile_icon.jpg" alt="Profile Icon" class="profile-icon" onclick="toggleDropdown()">
+    <div id="dropdownMenu" class="dropdown-content">
+        <span id="cardCount">Cards: 0</span>
+        <button onclick="logOut()">Log Out</button>
+    </div>
+</div>
+
+    </nav>
+
+    <!-- Add Card Section -->
+    <section id="addCard">
+        <h2>Add a New Baseball Card</h2>
+        <form id="cardForm">
+            <label for="playerName">Player Name:</label>
+            <input type="text" id="playerName" required>
+            
+            <label for="team">Team:</label>
+            <input type="text" id="team">
+            
+            <label for="year">Year:</label>
+            <input type="text" id="year">
+            
+            <label for="condition">Condition:</label>
+            <input type="text" id="condition">
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber">
+
+            <label for="cardBrand">Card Brand:</label>
+            <input type="text" id="cardBrand">
+            
+            <button type="button" onclick="addCard()">Add Card</button>
+        </form>
+    </section>
+
+    <!-- View Cards Section -->
+    <section id="viewCards">
+        <h2>Your Baseball Card Collection</h2>
+        <ul id="cardsList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
